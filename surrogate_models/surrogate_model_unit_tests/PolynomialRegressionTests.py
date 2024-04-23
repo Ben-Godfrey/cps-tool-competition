@@ -4,7 +4,8 @@ from sklearn.datasets import make_regression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
-from surrogate_models.PolynomialRegression import PolynomialRegressionSurrogate
+from ..PolynomialRegression import PolynomialRegressionSurrogate
+
 
 class TestPolynomialRegressionSurrogate(unittest.TestCase):
     def setUp(self):

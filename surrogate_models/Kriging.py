@@ -8,8 +8,8 @@ from sklearn.metrics import mean_squared_error
 class KrigingSurrogate:
     def __init__(self):
         # Set up the Gaussian Process Regressor with an RBF kernel
-        kernel = C(1.0, (1e-3, 1e3)) * RBF(1.0, (1e-2, 1e2))
-        self.gp = GaussianProcessRegressor(kernel=kernel, n_restarts_optimizer=10)
+        kernel = C(1.0, (1e-3, 1e3)) * RBF(1.0, (1e-3, 1e2))
+        self.gp = GaussianProcessRegressor(kernel=kernel, optimizer='fmin_l_bfgs_b', n_restarts_optimizer=100)
 
     def fit(self, X, y):
         # Fit the surrogate model to the provided data

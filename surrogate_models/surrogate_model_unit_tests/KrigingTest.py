@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel as C, RBF
-from surrogate_models.Kriging import KrigingSurrogate
+from ..Kriging import KrigingSurrogate
 
 class TestKrigingSurrogate(unittest.TestCase):
     def setUp(self):
